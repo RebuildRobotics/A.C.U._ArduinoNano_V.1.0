@@ -547,8 +547,11 @@ void setup()
   // Init Arena lights and turn them on
   lights.begin();
   resetLights();
-  // Init servo
+  // Init trap servo
   trap.attach(PIN_TRAP);
+  // Close trap
+  trap.write(TRAP_CLOSE);
+  // Init camera servos
   cameras.attach(PIN_CAMS);
   // Init LED Timer display
   timer.begin();
